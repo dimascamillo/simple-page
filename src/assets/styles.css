@@ -21,6 +21,7 @@
 .container {
   max-width: 66.875rem;
   margin: auto;
+  padding: 0 1.875rem;
 }
 /* end random components */
 
@@ -32,9 +33,56 @@ header {
   margin-top: 2.125rem;
 }
 
-header ul {
+header nav {
+  position: relative;
+}
+
+header nav > i {
+  font-size: 32px;
+  cursor: pointer;
+}
+
+header ul.disabled {
+  width: 50%;
+  height: 100%;
   display: flex;
   gap: 5rem;
+  position: fixed;
+  align-items: baseline;
+  top: 0;
+  right: 0;
+  padding: 90px 30px;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform: translate(120%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+header ul.active {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 5rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 90px 30px;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform: translate(0, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+header nav #triggerClosed {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 32px;
 }
 
 header li {
@@ -164,7 +212,7 @@ header button[type="submit"]:not(:disabled):hover {
 }
 
 .contact form {
-  width: 600px;
+  max-width: 600px;
   margin: auto;
   padding: 0 1rem;
 }
@@ -177,6 +225,10 @@ header button[type="submit"]:not(:disabled):hover {
   background-color: var(--white);
   border: 1px solid var(--white-300);
   border-radius: 5px;
+}
+
+.contact form input.error {
+  border: 1px solid red;
 }
 
 .contact form input + input {
