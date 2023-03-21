@@ -1,0 +1,205 @@
+/* Declare Variables CSS */
+:root {
+  --white: white;
+  --white-300: #E4E4E4;
+
+  --black-300: #333333;
+  --black-550: #555555;
+
+  --gray-300: #BBBBBB;
+
+  --blue-300: #EFF7FF;
+  --blue-400: #b2baff;
+  --blue-500: rgba(0, 72, 255, 1);
+  --blue-700: #0048ff;
+
+  --pink-300: #ffc1dc;
+}
+/* End decclare variables CSS */
+
+/* initial random components */
+.container {
+  max-width: 66.875rem;
+  margin: auto;
+}
+/* end random components */
+
+/* styles header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.125rem;
+}
+
+header ul {
+  display: flex;
+  gap: 5rem;
+}
+
+header li {
+  list-style: none;
+}
+
+header li a {
+  display: inline-block;
+  color: var(--black-300);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.5s;
+}
+
+header li a:hover {
+  opacity: 1;
+}
+
+header li a::first-letter {
+  text-transform: uppercase;
+}
+
+header li a.active {
+  font-weight: 700;
+}
+
+header button[type="submit"] {
+  cursor: pointer;
+  width: 121px;
+  height: 43px;
+  border: 2px solid var(--pink-300);
+  color: var(--black-300);
+  background: transparent;
+  border-radius: 100px;
+  transition: all 0.5s;
+}
+
+header button[type="submit"]:disabled {
+  cursor: not-allowed;
+}
+
+header button[type="submit"]::first-letter {
+  text-transform: uppercase;
+}
+
+header button[type="submit"]:not(:disabled):hover {
+  border: 1px solid var(--pink-300);
+  color: var(--white);
+  background: var(--pink-300);
+}
+/* end styles header */
+
+/* main */
+
+/* banner section */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 6.75rem;
+  margin-bottom: 4.1875rem;
+}
+
+.banner__content {
+  width: 475px;
+  text-align: left;
+}
+
+.banner__content h1 {
+  color: var(--blue-500);
+  font-size: 2.875rem;
+  font-weight: 700;
+  margin-bottom: 3.4375rem;
+}
+
+.banner__content--text {
+  color: var(--black-550);
+  font-weight: 500;
+  margin-bottom: 3.4375rem;
+}
+
+.banner__content button {
+  width: 191px;
+  height: 43px;
+  font-size: 1.25rem;
+  color: var(--white);
+  background: linear-gradient(238.41deg, #09153f 1.24%, #002bc2 57.38%);
+  border-radius: 100px;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.banner__content button::after {
+  content: "→";
+  margin-left: 1rem;
+  color: var(--blue-300);
+}
+
+.banner__content button:hover {
+  opacity: 0.8;
+}
+
+.banner__img {
+  width: 475px;
+  height: 450px;
+}
+
+.banner__img img {
+  width: 100%;
+  object-fit: cover;
+}
+/* end banner section */
+
+.contact {
+  background-color: var(--blue-300);
+  padding: 2.5rem 0 5.1875rem 0;
+  text-align: center;
+}
+
+.contact h2 {
+  color: var(--blue-700);
+  font-size: 2.5rem;
+  margin-bottom: 5.125rem;
+  text-align: center;
+}
+
+.contact form {
+  width: 600px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.contact form input {
+  width: 100%;
+  padding: .84375rem 0 .84375rem .84375rem;
+  color: var(--gray-300);
+  font-size: 1.25rem;
+  background-color: var(--white);
+  border: 1px solid var(--white-300);
+  border-radius: 5px;
+}
+
+.contact form input + input {
+  margin-top: 1rem;
+}
+
+.contact button[type="submit"] {
+  width: 245px;
+  height: 43px;
+  color: var(--white);
+  background-color: var(--blue-700);
+  margin-top: 14.375rem;
+  cursor: pointer;
+  border: 0;
+  transition: all .5s;
+}
+
+.contact button[type="submit"].disabled{
+  cursor: not-allowed;
+}
+
+.contact button[type="submit"]:not(.disable):hover {
+  opacity: .6;
+}
+
+/* end main */
